@@ -15,7 +15,7 @@ pipeline {
                      elif [ "$image_id" != "2ca708c1c9cc" ]; then
 		        echo "Old Docker Image!!! Removing..."
                         docker rmi -f ubuntu:latest
-                        docker pull ubintu:latest
+                        docker pull ubuntu:latest
                      else
                         echo "Docker Image Already Exist"
                      fi
