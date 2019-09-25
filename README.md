@@ -23,3 +23,9 @@ http://server-6:8889/lab
 yi-dockeradmin <username>-jupiter
 ```
 
+### Download Anacoda Installer for Linux
+
+https://www.anaconda.com/distribution/#linux
+
+https://repo.continuum.io/archive/
+
