@@ -27,7 +27,7 @@ When running locally, the /tensorflow/models/research/ and slim directories shou
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 
-In order to ignore deprecation warnings in Python commnds we are using following option:
+In order to ignore deprecation warnings in Python commands we are using following option:
 
 `PYTHONWARNINGS=ignore:DEPRECATION pip ...`
 
