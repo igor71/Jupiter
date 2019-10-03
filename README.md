@@ -71,6 +71,13 @@ To run it by clicking top menu Cell -> Run all:
 ![alt text](https://miro.medium.com/max/3275/1*vTgUdfXqWq6yUyW1jdbxxQ.png)
 
 ```
+Wait a while and scroll down to find test results:
+```
+![alt text](https://miro.medium.com/max/3275/1*cYQQ_X8mvDb__tAXTT97tQ.png)
+
+![alt text](https://miro.medium.com/max/3275/1*0YEC6XaLNY9mA9Kj413f0g.png)
+
+```
 In order to access running container as root user:
 
 yi-dockeradmin <username>-jupiter-tf
