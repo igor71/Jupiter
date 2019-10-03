@@ -23,8 +23,9 @@ The Tensorflow Object Detection API uses Protobufs to configure model and traini
 `protoc object_detection/protos/*.proto --python_out=.`
 
 When running locally, the /tensorflow/models/research/ and slim directories should be appended to PYTHONPATH. This can be done by running the following command:
-
-`export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim`
+```
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+```
 
 In order to ignore deprecation warnings in Python commnds we are using following option:
 
