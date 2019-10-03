@@ -25,16 +25,16 @@ pipeline {
         stage('Build Docker Image ') {
             steps {
                 sh '''#!/bin/bash -xe
-		   docker build -f Dockerfile-Jupiter -t yi/jupiter:latest .
+		   docker build -f Dockerfile-Jupiter-TF -t yi/jupiter-tf:latest .
 		   ''' 
             }
         }
 	    stage('Testing Docker Image') { 
             steps {
                 sh '''#!/bin/bash -xe
-		   echo 'Hello, PyTorch_Docker'
-                   image_id="$(docker images -q yi/jupiter:latest)"
-                   if [[ "$(docker images -q yi/jupiter:latest 2> /dev/null)" == "$image_id" ]]; then
+		   echo 'Hello, Jupiter-TF Docker'
+                   image_id="$(docker images -q yi/jupiter:latest-tf)"
+                   if [[ "$(docker images -q yi/jupiter-tf:latest 2> /dev/null)" == "$image_id" ]]; then
                      docker inspect --format='{{range $p, $conf := .RootFS.Layers}} {{$p}} {{end}}' $image_id
                    else
                      echo "It appears that current docker image corrapted!!!"
@@ -47,18 +47,18 @@ pipeline {
             steps {
                 sh '''#!/bin/bash -xe
 		   echo 'Saving Docker image into tar archive'
-                   docker save yi/jupiter:latest | pv | cat > $WORKSPACE/yi-jupiter-latest.tar
+                   docker save yi/jupiter:latest | pv | cat > $WORKSPACE/yi-jupiter-tf-latest.tar
 			
                    echo 'Remove Original Docker Image' 
-		   CURRENT_ID=$(docker images | grep -E '^yi/jupiter.*'latest'' | awk -e '{print $3}')
-		   docker rmi -f yi/jupiter:latest
+		   CURRENT_ID=$(docker images | grep -E '^yi/jupiter-tf.*'latest'' | awk -e '{print $3}')
+		   docker rmi -f yi/jupiter-tf:latest
 			
                    echo 'Loading Docker Image'
-                   pv -f $WORKSPACE/yi-jupiter-latest.tar | docker load
-		   docker tag $CURRENT_ID yi/jupiter:latest
+                   pv -f $WORKSPACE/yi-jupiter-tf-latest.tar | docker load
+		   docker tag $CURRENT_ID yi/jupiter-tf:latest
                         
                    echo 'Removing temp archive.'  
-                   rm -f $WORKSPACE/yi-jupiter-latest.tar
+                   rm -f $WORKSPACE/yi-jupiter-tf-latest.tar
 		
 		   echo 'Removing Basic Docker Image'
 		   docker rmi -f ubuntu:latest
