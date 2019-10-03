@@ -2,9 +2,9 @@
 
 ## Create docker image with TensorFlow and run object detection example.
 
-We will use Ubuntu image as base, for that we should extend our new image from ubuntu official repository:
+We will use Ubuntu image as base, for that we should extend our new image from [Ubuntu Official Repository](https://hub.docker.com/_/ubuntu/)
 
-https://hub.docker.com/_/ubuntu/
+
 
 ```
 As we are going to run object detection example we need to install all dependencies. 
