@@ -50,6 +50,16 @@ docker run -d --name $USER-jupiter-tf -p 8889:8889 yi/jupiter-tf:latest
 ```
 http://server-6:8889
 
+Our password is root
+
+Open object_detection_tutorial.ipynb
+It’s Tensorflow Object Detection example, our goal. Before run you need to make sure
+that we are useng properversion of tensorflow (>=1.12.0).
+
+To run it by clicking top menu Cell -> Run all
+
+In order to access running container as root user:
+
 yi-dockeradmin <username>-jupiter-tf
 ```
 
