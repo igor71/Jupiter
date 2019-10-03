@@ -55,7 +55,7 @@ Our password is root
 Open object_detection_tutorial.ipynb:
 ```
 
-![alt text](https://ibb.co/qjpwHnM)
+![alt text](https://miro.medium.com/max/3275/1*XZylTf7T7BAnwbwRWioMfA.png)
 
 ```
 It’s Tensorflow Object Detection example, our goal. Before run you need to make sure
