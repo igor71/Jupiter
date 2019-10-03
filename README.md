@@ -60,14 +60,17 @@ Open object_detection_tutorial.ipynb:
 ```
 It’s Tensorflow Object Detection example, our goal. Before run you need to make sure
 that we are useng proper version of tensorflow (>=1.12.0):
+```
 
 ![alt text](https://miro.medium.com/max/3275/1*aZ5ovAHAuuvj2r-kIcvaKw.png)
 
+```
 To run it by clicking top menu Cell -> Run all:
+```
 
 ![alt text](https://miro.medium.com/max/3275/1*vTgUdfXqWq6yUyW1jdbxxQ.png)
 
-
+```
 In order to access running container as root user:
 
 yi-dockeradmin <username>-jupiter-tf
