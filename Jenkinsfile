@@ -47,7 +47,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash -xe
 		   echo 'Saving Docker image into tar archive'
-                   docker save yi/jupiter:latest | pv | cat > $WORKSPACE/yi-jupiter-tf-latest.tar
+                   docker save yi/jupiter-tf:latest | pv | cat > $WORKSPACE/yi-jupiter-tf-latest.tar
 			
                    echo 'Remove Original Docker Image' 
 		   CURRENT_ID=$(docker images | grep -E '^yi/jupiter-tf.*'latest'' | awk -e '{print $3}')
