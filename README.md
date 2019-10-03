@@ -38,12 +38,12 @@ git clone --branch=Jupiter-Tensorflow --depth=1 https://github.com/igor71/Jupite
 
 cd Jupiter
 
-docker build -f Dockerfile -t yi/jupiter-tensorflow:latest .`
+docker build -f Dockerfile-Jupiter-TF -t yi/jupiter-tf:latest .`
 ```
 
 ### Running Docker Container
 ```
-docker run -d --name $USER-jupiter-tf -p 8889:8889 yi/jupiter:latest
+docker run -d --name $USER-jupiter-tf -p 8889:8889 yi/jupiter-tf:latest
 ```
 
 ### Access Jupiter Notebook
