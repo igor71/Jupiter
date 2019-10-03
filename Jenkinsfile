@@ -11,7 +11,7 @@ pipeline {
                    # Check If Docker Image Exist On Desired Server 
 		        if [ "$image_id" == "" ]; then
                         echo "Docker Image Does Not Exist!!!"
-                        docker pull ubintu:latest
+                        docker pull ubuntu:latest
                      elif [ "$image_id" != "2ca708c1c9cc" ]; then
 		        echo "Old Docker Image!!! Removing..."
                         docker rmi -f ubuntu:latest
