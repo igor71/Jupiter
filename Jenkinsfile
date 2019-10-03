@@ -33,7 +33,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash -xe
 		   echo 'Hello, Jupiter-TF Docker'
-                   image_id="$(docker images -q yi/jupiter:latest-tf)"
+                   image_id="$(docker images -q yi/jupiter-tf:latest)"
                    if [[ "$(docker images -q yi/jupiter-tf:latest 2> /dev/null)" == "$image_id" ]]; then
                      docker inspect --format='{{range $p, $conf := .RootFS.Layers}} {{$p}} {{end}}' $image_id
                    else
