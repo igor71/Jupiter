@@ -30,4 +30,4 @@ RUN protoc object_detection/protos/*.proto --python_out=. && \
 
 EXPOSE 8889
 
-CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/tensorflow/models/research/object_detection", "--ip=0.0.0.0", "--port=8888", "--no-browser"]
+CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/tensorflow/models/research/object_detection", "--ip=0.0.0.0", "--port=8889", "--no-browser"]
