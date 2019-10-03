@@ -31,6 +31,16 @@ In order to ignore deprecation warnings in Python commands we are using followin
 
 `PYTHONWARNINGS=ignore:DEPRECATION pip ...`
 
+### Using existing Docker Image
+```
+pv /media/common/DOCKER_IMAGES/Jupiter/yi-jupiter-tf-latest.tar | docker load
+
+docker tag bbfbf1bb4827 yi/jupiter-tf:latest
+
+docker run -d --name $USER-jupiter-tf -p 8889:8889 yi/jupiter-tf:latest
+```
+
+
 
 ### Build Jupiter-Notebook Docker Image Manually
 ```
