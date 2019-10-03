@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:latest
 
 MAINTAINER Igor Rabkin <igor.rabkin@xiaoyi.com>
 
