@@ -1,20 +1,22 @@
 # TensorFlow Object Detection With Ubuntu Docker
 
 ## Create docker image with TensorFlow and run object detection example.
-```
+
 We will use Ubuntu image as base, for that we should extend our new image from ubuntu official repository:
 
 https://hub.docker.com/_/ubuntu/
 
+```
 As we are going to run object detection example we need to install all dependencies. 
 Tensorflow Object Detection API depends on the following libraries:
-Protobuf 2.6
-Pillow 1.0
+Protobuf
+Pillow
 lxml
 tfSlim (which is included in the “tensorflow/models/research/” checkout)
 Jupyter notebook
 Matplotlib
 Tensorflow version >= 1.12.0
+```
 
 The Tensorflow Object Detection API uses Protobufs to configure model and training parameters. Before the framework can be used, the Protobuf libraries must be compiled. This should be done by running the following command:
 
@@ -27,7 +29,7 @@ When running locally, the /tensorflow/models/research/ and slim directories shou
 In order to ignore deprecation warnings in Python commnds we are using following option:
 
 `PYTHONWARNINGS=ignore:DEPRECATION pip ...`
-```
+
 
 ### Build Jupiter-Notebook Docker Image Manually
 ```
