@@ -19,7 +19,7 @@ RUN apt-get install -y \
 
 RUN PYTHONWARNINGS=ignore:DEPRECATION pip install jupyter matplotlib
 
-RUN git clone --progress https://github.com/tensorflow/models.git /tensorflow/models
+RUN git clone --progress --verbose https://github.com/tensorflow/models.git /tensorflow/models
 
 WORKDIR /tensorflow/models/research
 
