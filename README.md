@@ -52,7 +52,10 @@ http://server-6:8889
 
 Our password is root
 
-Open object_detection_tutorial.ipynb
+Open object_detection_tutorial.ipynb:
+
+https://mega.nz/#!05NVyCza!DvEVYiY7i8NncNnQxhz_CfWBXeOjnSIcu-t6RI_H0Ro
+
 It’s Tensorflow Object Detection example, our goal. Before run you need to make sure
 that we are useng properversion of tensorflow (>=1.12.0).
 
