@@ -55,7 +55,7 @@ docker build -f Dockerfile-Jupiter-TF -t yi/jupiter-tf:latest .`
 docker run -d --name $USER-jupiter-tf -p 8889:8889 yi/jupiter-tf:latest
 ```
 
-### Build Jupiter-Notebook Docker Image Manually With Docker-Compose Command
+### Build Jupiter-Notebook Docker Image Manually & Run It With Docker-Compose Command
 ```
 git clone --branch=Jupiter-Tensorflow --depth=1 https://github.com/igor71/Jupiter.git
 
