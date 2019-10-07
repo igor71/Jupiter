@@ -40,9 +40,7 @@ docker tag bbfbf1bb4827 yi/jupiter-tf:latest
 docker run -d --name $USER-jupiter-tf -p 8889:8889 yi/jupiter-tf:latest
 ```
 
-
-
-### Build Jupiter-Notebook Docker Image Manually
+### Build Jupiter-Notebook Docker Image Manually With Docker Build Command
 ```
 git clone --branch=Jupiter-Tensorflow --depth=1 https://github.com/igor71/Jupiter.git
 
@@ -51,9 +49,19 @@ cd Jupiter
 docker build -f Dockerfile-Jupiter-TF -t yi/jupiter-tf:latest .`
 ```
 
+
 ### Running Docker Container
 ```
 docker run -d --name $USER-jupiter-tf -p 8889:8889 yi/jupiter-tf:latest
+```
+
+### Build Jupiter-Notebook Docker Image Manually With Docker-Compose Command
+```
+git clone --branch=Jupiter-Tensorflow --depth=1 https://github.com/igor71/Jupiter.git
+
+cd Jupiter
+
+docker-compose up -d --build
 ```
 
 ### Access Jupiter Notebook
