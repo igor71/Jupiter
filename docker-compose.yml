@@ -1,0 +1,13 @@
+version: "3.1"
+services:
+    jupiter:
+      image: yi/jupiter-tf:latest
+      build:
+        context: $PWD
+        dockerfile: Dockerfile-Jupiter-TF
+      volumes:
+        - "/media:/media"
+      ports:
+        - "8889:8889"
+      container_name:
+        - "$USER-jupiter-tf"
