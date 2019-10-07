@@ -9,5 +9,5 @@ services:
         - "/media:/media"
       ports:
         - "8889:8889"
-      container_name: jupiter-tf
+      container_name: ${USER}-jupiter-tf
         
