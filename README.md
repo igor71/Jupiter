@@ -46,7 +46,7 @@ git clone --branch=Jupiter-Tensorflow --depth=1 https://github.com/igor71/Jupite
 
 cd Jupiter
 
-docker build -f Dockerfile-Jupiter-TF -t yi/jupiter-tf:latest .`
+docker build -f Dockerfile-Jupiter-TF -t yi/jupiter-tf:latest .
 ```
 
 
